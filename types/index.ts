@@ -9,3 +9,11 @@ export interface CustomButtonProps {
     rightIcon?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
   }
+
+  export interface FilterProps {
+    time: number;
+    equipment:string;
+    muscle: string;
+    fitness_level: string;
+    fitness_goals: string;
+}
