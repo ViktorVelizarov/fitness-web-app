@@ -10,6 +10,10 @@ export interface CustomButtonProps {
     handleClick?: MouseEventHandler<HTMLButtonElement>;
   }
 
+  export interface CustomListProps {
+    values: any[]
+  }
+
   export interface FilterProps {
     time: number;
     equipment:string;

@@ -32,7 +32,7 @@ const Hero = () => {
 
         <div className="absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden" />
       </div>
-        </div>
+      </div>
       );
 }
 
