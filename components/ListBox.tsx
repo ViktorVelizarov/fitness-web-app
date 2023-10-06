@@ -1,14 +1,19 @@
 "use client"
 
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { CustomListProps } from "@/types";
 
 
-export default function ListBox({ values } : CustomListProps) {
+export default function ListBox({ values, onUpdate, field } : CustomListProps) {
   const [selected, setSelected] = useState(values[0])
-  console.log(selected)
+
+  useEffect(() => {
+    console.log("the new value is: ")
+    console.log(selected)
+    onUpdate(field, selected)
+  }, [selected])
   return (
     <div className=" top-16 w-72">
       <Listbox value={selected} onChange={setSelected}>

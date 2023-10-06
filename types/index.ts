@@ -11,7 +11,9 @@ export interface CustomButtonProps {
   }
 
   export interface CustomListProps {
-    values: any[]
+    values: any[];
+    onUpdate: Function;
+    field: string
   }
 
   export interface FilterProps {
