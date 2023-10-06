@@ -28,13 +28,47 @@ export default async function Home() {
     { name: 'Gym' },
     { name: 'Home' },
   ]
+
+  const muscleGroup = [
+    { name: 'Choose muscle group' },
+    { name: 'Chest' },
+    { name: 'Back' },
+    { name: 'Biceps' },
+    { name: 'Triceps' },
+    { name: 'Abs' },
+    { name: 'Legs' },
+    { name: 'Shoulders' },
+    { name: 'Full-body' },
+  ]
+
+  const fitnessLevel = [
+    { name: 'Choose fitness level' },
+    { name: 'beginner' },
+    { name: 'intermediate' },
+    { name: 'advanced' },
+  ]
+
+  const fitnessGoals = [
+    { name: 'Choose fitness goals' },
+    { name: 'weight_loss' },
+    { name: 'muscle_gain' },
+    { name: 'strength_training' },
+    { name: 'cardiovascular_endurance' },
+    { name: 'flexibility' },
+    { name: 'general_fitness' },
+  ]
   
   return (
     <main>
       <Hero/>
 
-      <div className='mt-12 padding-x padding-y max-width' id='discover'>
+      <div className='flex flex-row justify-center gap-4 mt-12 padding-x padding-y max-width' id='discover'>
       <ListBox values={time}/>
+      <ListBox values={equpment}/>
+      <ListBox values={muscleGroup}/>
+      <ListBox values={fitnessLevel}/>
+      <ListBox values={fitnessGoals}/>
+
       </div>
     </main>
   )
