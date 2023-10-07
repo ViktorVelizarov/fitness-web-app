@@ -10,8 +10,6 @@ export default function ListBox({ values, onUpdate, field } : CustomListProps) {
   const [selected, setSelected] = useState(values[0])
 
   useEffect(() => {
-    console.log("the new value is: ")
-    console.log(selected)
     onUpdate(field, selected)
   }, [selected])
   return (
